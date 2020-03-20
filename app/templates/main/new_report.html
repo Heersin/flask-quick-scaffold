@@ -1,0 +1,84 @@
+{% extends "new_base.html" %}
+
+
+{% block title %}Example Page{% endblock %}
+{% block header_js %}
+<script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+{% endblock %}
+
+{% block header_bg %}
+<div class="header-bg">
+    <!-- Navigation Bar-->
+    <header id="topnav">
+        <div class="topbar-main">
+            <div class="container-fluid">
+
+                <!-- Logo container-->
+                <div class="logo">
+                    <!-- Text Logo -->
+                    <div class="logo">
+                        Example Page
+                    </div>
+                    <!-- Image Logo -->
+                    <!-- <a href="index.html" class="logo">
+                        <img src="assets/images/logo-sm.png" alt="" height="22" class="logo-small">
+                        <img src="assets/images/logo.png" alt="" height="24" class="logo-large">
+                    </a> -->
+                    
+                </div>
+                <!-- End Logo container-->
+                
+                <div class="menu-extras topbar-custom">
+                    <div class="list-inline float-right mb-0">
+                        <!-- notification-->
+                        <li class="list-inline-item dropdown notification-list">
+                            <a class="nav-link waves-effect" role="button"
+                            aria-haspopup="false" aria-expanded="false" href="#" onclick="window.print()">
+                                <i class="mdi mdi-cloud-download leave_icon text-center"> 下载页面 </i> 
+                            </a>
+                        </li>
+                        <li class="list-inline-item dropdown notification-list">
+                            <a class="nav-link arrow-none waves-effect"  href="{{url_for('main.index')}}" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <i class="mdi mdi-keyboard-tab leave_icon text-center"> 返回 </i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                
+
+            </div> <!-- end container -->
+        </div>
+        <!-- end topbar-main -->
+    </header>
+    <!-- End Navigation Bar-->
+</div>
+{% endblock %}
+
+{% block main_wrapper %}
+<div class="wrapper">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <h4 class="mt-0 m-b-30 header-title">Web with args</h4>
+
+                        <div class="table-responsive" style="margin-left:200px; margin-top:40px;">
+                            {{ chart | safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- end row -->
+
+    </div> <!-- end container -->
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Index - Your App</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- BackGroud in style.css -->
+        
+        <link href="http://cdn.bootstrapmb.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='assets/css/icons.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet" type="text/css" />
+    </head>
+
+
+    <body>
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom navbar-default navbar-light bg-trans sticky">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav navbar-center " id="index-nav">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link scroll">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#intro" class="nav-link scroll">简介</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#faq" class="nav-link scroll">问答</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#team" class="nav-link scroll">团队</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron masthead" id="home">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-12 jumbotron-content">
+                    <h1>Flask-Quick-Scaffold</h1>
+                    <h2>快速搭建Flask展示</h2>
+                    <h4>&nbsp;</h4>
+                    <p class="masthead-button-links">
+                        <a class="btn btn-lg btn-pink btn-shadow" href="{{url_for('auth.login')}}" target="_blank" role="button">登录平台</a>
+                        <a class="btn btn-lg btn-pink btn-shadow" href="{{url_for('auth.register')}}" target="_blank" role="button">注册</a>
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title"> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <div class="container-fluid">
+                <!-- Introduction -->
+                <div id="intro">
+                    <h1>平台简介</h1>
+                </div>
+                <div class="description" >
+                    <div class="row row--gutter">
+                        <div class="col-lg-6 ">
+                            <p>简单介绍平台功能</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img class="img-fluid" src="{{ url_for('static', filename='./assets/images/function.jpg')}}" alt="效果图">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- FAQ Part -->
+                <div id="faq">
+                    <h1>问答</h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card m-b-30">
+                            <img class="card-img-top img-fluid" src="{{ url_for('static', filename='./assets/images/sea.jpg')}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title font-20 mt-0">海水</h4>
+                                <p class="card-text">
+                                    The Sea
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <h4 class="card-title font-20 mt-0">日光</h4>
+                                <p class="card-text">
+                                    The Light
+                                </p>
+                            </div>
+                            <img class="card-img-bottom img-fluid" src="{{ url_for('static', filename='./assets/images/light.jpg')}}" alt="Card image cap">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card m-b-30">
+                            <img class="card-img-top img-fluid" src="{{ url_for('static', filename='./assets/images/ashenone.jpg')}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title font-20 mt-0">灰烬</h4>
+                                <p class="card-text">
+                                    Long may the sunshine !
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Team Part -->
+                <div id="team">
+                    <h1>团队</h1>
+                </div>
+                <div class="row team_row">
+                    <div class="col-lg-4">
+                        <div>
+                            <i class="mdi mdi-account-multiple team_icon"></i>
+                        </div>
+                        <h3>团队成员</h3>
+                        <div>Something About your team</div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div>
+                            <i class="mdi mdi-github-circle team_icon"></i>
+                        </div>
+                        <h3>代码开源</h3>
+                        <div>Something about yourt code</div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div>
+                            <i class="mdi mdi-settings team_icon"></i>
+                        </div>
+                        <h3>快速搭建</h3>
+                        <div>Something about your setting</div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div> 
+            <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        @Flask-Quick-Scaffold
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        联系我们:github
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+
+        <!-- jQuery  -->
+        <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/modernizr.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/waves.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.slimscroll.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.nicescroll.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.scrollTo.min.js')}}"></script>
+        <script src="http://cdn.bootstrapmb.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+        <!-- App js -->
+        <script src="{{url_for('static', filename='assets/js/app.js')}}"></script>
+
+    </body>
+</html>
