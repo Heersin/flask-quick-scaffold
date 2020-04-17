@@ -5,11 +5,11 @@
 
 ## 新加入效果
 ### 前台首页
-![https://github.com/Heersin/flask-quick-scaffold/blob/master/log/index.jpg]
+![index](https://github.com/Heersin/flask-quick-scaffold/blob/master/log/index.jpg)
 ### 注册
-![https://github.com/Heersin/flask-quick-scaffold/blob/master/log/reg.png]
+![reg](https://github.com/Heersin/flask-quick-scaffold/blob/master/log/reg.png)
 ### 上传文件
-![https://github.com/Heersin/flask-quick-scaffold/blob/master/log/upload.png]
+![upload](https://github.com/Heersin/flask-quick-scaffold/blob/master/log/upload.png)
  
 
 ## 项目结构
